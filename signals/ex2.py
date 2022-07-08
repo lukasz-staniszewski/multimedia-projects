@@ -2,51 +2,44 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-def signal(n, A, okresN, n0=0):
-    """Oblicza wartosc sygnalu z zadania
+def signal(n, A, periodN, n0=0):
+    """Calculates signal value.
 
     Args:
-        n (int): argument funkcji
-        A (int): amplituda
-        okresN (int): okres sygnalu
-        n0 (int, optional): przesuniecie argumentu, domyslnie 0
+        n (int): function argument
+        A (int): amplitude
+        periodN (int): period of signal
+        n0 (int, optional): argument shift, defaults to 0
 
     Returns:
-        int: wartosc sygnalu dla danego n
+        int: signal value for n
     """
-    return A * np.sin(2 * np.pi * (n - n0) / okresN)
+    return A * np.sin(2 * np.pi * (n - n0) / periodN)
 
 
-if __name__ == "__main__":
-    # wyznaczenie okresu i amplitudy
-    okresN = 88
+def task_2():
+    """Function checks effect of time shift on the form of the amplitude spectrum and phase spectrum of a discrete harmonic signal."""
+
+    # amplitude and period definition
+    periodN = 88
     A = 2
-    # zdefiniowanie dziedziny
-    domain = np.linspace(0, okresN - 1, okresN)
-    # wyznaczenie próbek sygnalow
-    signal0 = signal(domain, A, okresN)
-    signalN4 = signal(domain, A, okresN, okresN / 4)
-    signalN2 = signal(domain, A, okresN, okresN / 2)
-    signal3N4 = signal(domain, A, okresN, 3 * okresN / 4)
-    # plt.figure(1)
-    # plt.title("SYGNAŁ s[n]:")
-    # plt.stem(domain, signal0)
-    # plt.figure(2)
-    # plt.title("SYGNAŁ s[n-N/4]:")
-    # plt.stem(domain, signalN4)
-    # plt.figure(3)
-    # plt.title("SYGNAŁ s[n-N/2]:")
-    # plt.stem(domain, signalN2)
-    # plt.figure(4)
-    # plt.title("SYGNAŁ s[n-3N/4]:")
-    # plt.stem(domain, signal3N4)
-    # plt.show()
-    # transformaty sygnalow
-    signal0_fft = np.fft.fft(signal0) / okresN
-    signalN4_fft = np.fft.fft(signalN4) / okresN
-    signalN2_fft = np.fft.fft(signalN2) / okresN
-    signal3N4_fft = np.fft.fft(signal3N4) / okresN
-    # normalizacja
+
+    # domain definition
+    domain = np.linspace(0, periodN - 1, periodN)
+
+    # determination of signal samples
+    signal0 = signal(domain, A, periodN)
+    signalN4 = signal(domain, A, periodN, periodN / 4)
+    signalN2 = signal(domain, A, periodN, periodN / 2)
+    signal3N4 = signal(domain, A, periodN, 3 * periodN / 4)
+
+    # signals transform
+    signal0_fft = np.fft.fft(signal0) / periodN
+    signalN4_fft = np.fft.fft(signalN4) / periodN
+    signalN2_fft = np.fft.fft(signalN2) / periodN
+    signal3N4_fft = np.fft.fft(signal3N4) / periodN
+
+    # normalization
     for ind in range(signal0_fft.shape[0]):
         if np.abs(signal0_fft[ind]) < 1e-06:
             signal0_fft[ind] = 0.0
@@ -56,7 +49,8 @@ if __name__ == "__main__":
             signalN2_fft[ind] = 0.0
         if np.abs(signal3N4_fft[ind]) < 1e-06:
             signal3N4_fft[ind] = 0.0
-    # plotowanie
+
+    # plotting
     plt.figure(5)
     plt.title("WIDMO AMPLITUDOWE s[n]")
     wid_amp_0 = np.abs(signal0_fft)
@@ -113,3 +107,7 @@ if __name__ == "__main__":
     plt.ylabel("faza widma")
     plt.stem(wid_faz_3N4)
     plt.show()
+
+
+if __name__ == "__main__":
+    task_2()

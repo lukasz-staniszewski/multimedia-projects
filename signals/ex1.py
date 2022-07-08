@@ -34,7 +34,7 @@ def parseval_dft(sig):
 
 
 def task_1a():
-    """ """
+    """Function calculates and plots amplitude and phase spectrum, calculates power and checks Parseval's theorem."""
     # sig and period definition
     sig1 = np.array([2, 3, 1, 0])
     sig2 = np.array([0, 3, 1, 0])
@@ -96,7 +96,7 @@ def task_1a():
 
 
 def task_1b():
-    """ """
+    """Function checks discrete Fourier transform theorem of circular convolution."""
     # sig and period definition
     sig1 = np.array([2, 3, 1, 0])
     sig2 = np.array([0, 3, 1, 0])
