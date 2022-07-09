@@ -23,7 +23,14 @@
     + Task 3 - Using the Laplace filter to determine the high-frequency components of the image. Image sharpening.
     <div align="center"> [PL] DOCUMENTATION HERE [PL] </div>
 3. Image statistical properties
-    + 
+    + Task 1 - Determination of bit rate for monochromatic image compressed with PNG encoder, determination of image entropy.
+    + Task 2 - Determining and displaying differential monochromatic image. Determining its histogram and entropy and comparing it with the original image. 
+    + Task 3 - Determination of DWT transformation coefficients - determination and display of bands for monochromatic image.
+    + Task 4 - Calculating entropy for the RGB components of the colour image.
+    + Task 5 - Performing conversion from RGB to YUV and calculate the entropy for the YUV components. Determining histograms for all components.
+    + Task 6 - Determining dependence of distortion D on bit rate R (relative to image quality) with distortion measure PSNR and error mean square error MSE. Comparing compression ratios obtained for the JPEG encoder with the PNG encoder.
+    <div align="center"> [PL] DOCUMENTATION HERE [PL] </div>
+4. 
 ## Used technologies
 1. Python 3.10
 2. Necessary Python packages in requirements.txt
