@@ -22,7 +22,8 @@
     + Task 2 - Implementation of a histogram equalisation operation for a colour image. Convert an RGB image to a YCbCr image. Comparison of images and their histograms.
     + Task 3 - Using the Laplace filter to determine the high-frequency components of the image. Image sharpening.
     <div align="center"> [PL] DOCUMENTATION HERE [PL] </div>
-3. 
+3. Image statistical properties
+    + 
 ## Used technologies
 1. Python 3.10
 2. Necessary Python packages in requirements.txt
