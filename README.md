@@ -6,7 +6,7 @@
 </div>
 
 <div align="center">
-  ENG: This repository contains mini-projects created as part of the Multimedia Fundamentals course..
+  ENG: This repository contains mini-projects created as part of the Multimedia Fundamentals course.
 </div>
 
 ## Table of contents
@@ -30,7 +30,11 @@
     + Task 5 - Performing conversion from RGB to YUV and calculate the entropy for the YUV components. Determining histograms for all components.
     + Task 6 - Determining dependence of distortion D on bit rate R (relative to image quality) with distortion measure PSNR and error mean square error MSE. Comparing compression ratios obtained for the JPEG encoder with the PNG encoder.
     <div align="center"> [PL] DOCUMENTATION HERE [PL] </div>
-4. 
+4. Image analysis - face detection
+    + Task 1 - Determining the performance measure of face detection algorithms: HAAR'S CASCADE DETECTOR, HOG + SVM and CNN (MMOD) for a test image.
+    + Task 2 - Applying modifications to the face detection algorithms and measuring their execution times.
+    <div align="center"> [PL] DOCUMENTATION HERE [PL] </div>
+5. 
 ## Used technologies
 1. Python 3.10
 2. Necessary Python packages in requirements.txt
