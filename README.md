@@ -34,7 +34,11 @@
     + Task 1 - Determining the performance measure of face detection algorithms: HAAR'S CASCADE DETECTOR, HOG + SVM and CNN (MMOD) for a test image.
     + Task 2 - Applying modifications to the face detection algorithms and measuring their execution times.
     <div align="center"> [PL] DOCUMENTATION HERE [PL] </div>
-5. 
+5. Graphics generation using OpenGL
+    + Task 1 - Creation of a basic program and fragment shader in order to generate the Mandelbrot fractal.
+    + Task 2 - Assembling object transformations in a 3D scene. Loading objects from files, creating objects and applying a series of transformations to them to build a 'robot'.
+    + Task 3 - Adding Phong shading to a programme with a single light source, taking into account the parameters: light position and colour, object colour and object glossiness.
+    <div align="center"> [PL] DOCUMENTATION HERE [PL] </div>
 ## Used technologies
 1. Python 3.10
 2. Necessary Python packages in requirements.txt
